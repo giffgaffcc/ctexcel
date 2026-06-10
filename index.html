@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>2026英国CTExcel领卡与国内激活指南</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            padding-bottom: 40px;
+        }
+        /* 头部视觉渐变 */
+        .header {
+            background: linear-gradient(135deg, #0052d4, #4364f7, #6fb1fc);
+            color: #ffffff;
+            padding: 40px 20px 35px 20px;
+            text-align: center;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+        }
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+        .header p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        /* 浮动标签区 */
+        .badge-container {
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+        .badge {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 50px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .content {
+            padding: 10px 20px;
+        }
+        .section {
+            margin-bottom: 28px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0052d4;
+            margin-bottom: 15px;
+            border-left: 4px solid #0052d4;
+            padding-left: 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+        /* 卡片基础样式 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #eef2f5;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .card p {
+            font-size: 13px;
+            color: #475569;
+        }
+        /* 红色醒目特别说明 */
+        .notice-card {
+            background-color: #fff5f5;
+            border-left: 4px solid #f5222d;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #e53e3e;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .notice-card strong {
+            color: #c53030;
+        }
+        /* 警告高亮框 */
+        .warning-box {
+            background-color: #fff9db;
+            border-left: 4px solid #fab005;
+            padding: 12px 14px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #665200;
+            margin-bottom: 16px;
+        }
+        /* 步骤样式 */
+        .step-list {
+            margin-top: 5px;
+        }
+        .step-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 16px;
+        }
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: #0052d4;
+            color: #ffffff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .step-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 4px;
+        }
+        .step-desc {
+            font-size: 13px;
+            color: #64748b;
+        }
+        .step-note {
+            font-size: 12px;
+            color: #8795a1;
+            background: #f8fafc;
+            padding: 6px 10px;
+            border-radius: 6px;
+            margin-top: 6px;
+            border-left: 2px solid #cbd5e0;
+        }
+        /* 福利列表样式 */
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .benefit-num {
+            background: #e3f2fd;
+            color: #0052d4;
+            font-weight: bold;
+            border-radius: 6px;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            flex-shrink: 0;
+            margin-right: 10px;
+            margin-top: 2px;
+        }
+        .benefit-text {
+            font-size: 13px;
+            color: #475569;
+        }
+        .benefit-text strong {
+            color: #1e293b;
+        }
+        /* 行动导向模块（CTA） */
+        .cta-box {
+            background: #fafbfc;
+            border: 1px dashed #4364f7;
+            text-align: center;
+            padding: 20px 16px;
+        }
+        .btn-primary {
+            display: block;
+            background: linear-gradient(135deg, #0052d4, #4364f7);
+            color: white;
+            text-decoration: none;
+            padding: 13px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            margin: 16px 0;
+            box-shadow: 0 4px 12px rgba(67, 100, 247, 0.3);
+        }
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        .code-box {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e0;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 8px auto;
+            max-width: 150px;
+            color: #0f172a;
+        }
+        /* 图示区域 */
+        .order-diagram-container {
+            margin: 16px 0;
+            background: #f8fafc;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .order-diagram-img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+        /* 问答底栏 */
+        .qa-box {
+            background-color: #ffffff;
+            border: 1px solid #eef2f5;
+        }
+        .tag {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 11px;
+            color: #94a3b8;
+            border-top: 1px solid #f1f5f9;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 顶栏页眉 -->
+    <div class="header">
+        <h1>英国 CTExcel 领卡与激活指南</h1>
+        <p>£1 话费直邮中国 · 海外开户保号神卡</p>
+    </div>
+
+    <!-- 浮动标签 -->
+    <div class="badge-container">
+        <span class="badge">🇬🇧 2026 官方特惠活动</span>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="content">
+
+        <!-- 特别说明 -->
+        <div class="notice-card">
+            <strong>📢 特别说明：</strong>此内容仅为经验分享，受网络环境及系统限制影响，<strong>不保证所有人都能百分百激活</strong>。无忧数卡不提供关于此卡的任何技术支持，纯属技术分享。建议喜欢折腾、愿意深入钻研的朋友参与。<strong>小白用户、常规App接码用户、跨境接码业务用户，强烈建议直接选择更稳定的 giffgaff 卡</strong>。
+        </div>
+
+        <!-- 开户必备 -->
+        <div class="section">
+            <div class="card">
+                <p style="font-weight: 600; color: #1e293b; margin-bottom: 6px;">🏦 开户与保号必备</p>
+                <p>申请英国数字银行账户（如 Wise、Monzo 等）或注册海外 App 的核心前置条件，是拥有一张高性价比的英国实体卡。该卡在国内漫游时虽延迟较高，但胜在<strong>获取门槛极低、维持成本便宜</strong>，是接收银行验证码和日常保号的绝佳选择。</p>
+            </div>
+        </div>
+
+        <!-- 活动时间 -->
+        <div class="section">
+            <div class="card" style="background: linear-gradient(to right, #ffffff, #e3f2fd); border-left: 4px solid #0052d4;">
+                <p style="font-weight: 600; color: #0052d4; font-size: 14px;">📅 活动时间</p>
+                <p style="font-weight: 700; color: #0f172a; margin-top: 2px;">2026年6月1日 — 2026年10月31日</p>
+            </div>
+        </div>
+
+        <!-- 核心福利 -->
+        <div class="section">
+            <div class="section-title">🎁 核心福利盘点</div>
+            <div class="card">
+                <div class="benefit-item">
+                    <div class="benefit-num">1</div>
+                    <div class="benefit-text"><strong>套餐买一送一：</strong>订购任意套餐获赠 1 个月同款套餐（赠送流量仅限英国使用）。</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-num">2</div>
+                    <div class="benefit-text"><strong>多月流量翻倍：</strong>订购 £11.9/£14.9/£19.9 套餐并选择多月/自动续订，享前 3 个月流量翻倍。</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-num">3</div>
+                    <div class="benefit-text"><strong>免预充值费：</strong>在线领卡同步订购套餐，免除 £1 预充值费；选购靓号享 <strong>6 折</strong> 优惠（£8、£68、£288档除外）。</div>
+                </div>
+                <div class="benefit-item" style="margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e2e8f0;">
+                    <div class="benefit-num" style="background: #e6f9f0; color: #10b981;">🇨🇳</div>
+                    <div class="benefit-text" style="color: #115e59;"><strong>中国侧加码：</strong>前 300 名成功下单实体卡并订购套餐的用户，额外加赠限量小礼品，先到先得。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 激活教程 -->
+        <div class="section">
+            <div class="section-title">📖 搭配 英国/欧洲 网络环境激活教程</div>
+            <div class="card">
+                <div class="warning-box">
+                    ⚠️ 警告：此教程基于 iOS 18 测试。iOS 26 部分版本需要尾插硬件进行虚拟定位；iOS 26 最新版本由于系统限制目前无法打开 WiFi Calling。
+                </div>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-title">准备环境（手机先不要插卡）</div>
+                        <div class="step-desc">
+                            打开手机飞行模式，关闭定位服务。<br>
+                            <span style="color:#e53e3e; font-size:12px;">*(注：若使用 iOS 26 尾插定位版，请勿关闭定位，将虚拟位置设置到英国任意地区)*</span>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-title">重启与搭建环境</div>
+                        <div class="step-desc">
+                            重启手机。连接 WiFi 并使其<strong>搭配欧洲网络环境</strong>，推荐使用欧洲原生 IP（可在 <i>iplark.com</i> 检查归属地），部分广播英国 IP、机场节点亦可。
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-title">插卡并触发环境</div>
+                        <div class="step-desc">
+                            保持飞行模式和全局代理环境，插入物理 SIM/eUICC(实体eSIM) 卡或启用原生 eSIM。等待手机状态栏出现 <strong>WiFi Calling (iOS)</strong> 或 <strong>VoWiFi (Android)</strong> 标识。
+                            <div class="step-note">注：若未成功拉起，请切换节点多试几次（作者第二次才成功，此为关键门槛）。</div>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-title">拨打激活电话与完成</div>
+                        <div class="step-desc">
+                            在 WiFi Calling 模式下，拨打 <strong>888</strong> 进行激活。能打通即算激活成功。<br>
+                            <span style="font-weight:600; color:#0f172a; margin-top: 4px; display: block;">检查邮箱：若未打通亦无妨，最终激活结果一律以收到官方“激活成功邮件”为准。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 申请行动模块 -->
+        <div class="section">
+            <div class="card cta-box">
+                <p style="font-weight: 600; color: #0052d4; font-size: 15px;">💡 立即申请领卡</p>
+                <p style="font-size: 12px; color: #64748b; margin-top: 2px;">最快 1-7 个工作日直邮中国</p>
+                
+                <a href="https://www.ctexcel.com/freecard/home?recommendCode=GGQLXT" target="_blank" class="btn-primary">
+                    官方免邮申请入口
+                </a>
+
+                <p style="font-size: 12px; color: #64748b;">官方指定邀请码</p>
+                <div class="code-box">GGQLXT</div>
+
+                <!-- 下单图示 -->
+                <div class="order-diagram-container">
+                    <p style="font-size: 11px; color: #64748b; margin-bottom: 6px;">官网下单选择参考图示：</p>
+                    <img src="/cte-new.jpg" alt="CTExcel购买下单图示" class="order-diagram-img">
+                </div>
+
+                <p style="font-size: 12px; color: #475569; text-align: left; line-height: 1.4; margin-top: 10px;">
+                    👉 <strong>操作小贴士：</strong><br>
+                    进入官网后，若暂不需要长期高价套餐，可在选套餐页面直接勾选 <strong>“还没选好套餐”</strong>，仅需<strong>预存 £1 话费</strong>（话费留在卡里，相当于白送卡），即可享受零邮费直邮国内。
+                </p>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <div class="section">
+            <div class="card qa-box">
+                <p style="font-size: 13px; font-weight: 600; color: #1e293b; margin-bottom: 4px;">❓ 这卡能长期免费用吗？</p>
+                <p style="color: #64748b;">答：卡片激活后在国内纯接收短信完全免费。只要每隔 180 天内有一次其余额变动（例如搭配网络发一条短信，仅扣除几毛钱话费），即可一直免费保号。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        © 2026 英国CTExcel国内快捷申领与保号指南
+    </div>
+</div>
+
+</body>
+</html>
